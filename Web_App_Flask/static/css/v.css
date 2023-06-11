@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #F0F8FF;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.logo-image-1 {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-image-2 {
+    width: 100%;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.login {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 32px;
+    margin-top: 20px;
+    color: #FF0000;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button.btn {
+    padding: 10px 20px;
+    background-color: #FF0000;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.prediction-result {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+}
+
+h4 {
+    margin-top: 30px;
+    font-size: 18px;
+    color: #333;
+}
+
+.table-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+table {
+    width: 250px;
+    border-collapse: collapse;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #F5F5F5;
+    color: #fff;
+}
+
+.banner {
+    background-color: #FF0000;
+    padding: 10px;
+    text-align: center;
+}
+
+    .banner p {
+        color: #F0F8FF;
+    }

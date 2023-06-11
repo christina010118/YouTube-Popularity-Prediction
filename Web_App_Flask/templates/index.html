@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Youtube Video Popularity Prediction</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/v.css') }}" type="text/css">
+
+    <style>
+        .logo-image-1 {
+            width: 40%;
+            display: block;
+        }
+
+        .logo-image-2 {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .table-container {
+            display: flex;
+            margin-right: 10px;
+        }
+
+        table {
+            width: 300px;
+            margin-right: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #FF0000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <img src="https://t3.ftcdn.net/jpg/04/03/98/64/360_F_403986499_hB7zfgOXezReA0sKkxl34RoT9TbNkbpH.jpg" alt="Youtube Logo" class="logo-image-1">
+        <h1>Youtube Video Popularity Prediction</h1>
+        <h3>Enter the following values to predict your Youtube video view count</h3>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form id="prediction-form" action="/predict" method="post">
+            <input type="text" name="durationSL" placeholder="Duration" required="required" />
+            <input type="text" name="made_for_kidsSL" placeholder="Made for Kids" required="required" />
+            <input type="text" name="yearSL" placeholder="Year" required="required" />
+            <input type="text" name="time_of_daySL" placeholder="Time of Day" required="required" />
+            <input type="text" name="title_lengthSL" placeholder="Title Length" required="required" />
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+
+        <br>
+        <br>
+        <div id="prediction-result">
+            {% if prediction_text %}
+            <h4>Prediction Result: {{ prediction_text }}</h4>
+            {% endif %}
+        </div>
+
+
+        <h4>Use tables below for reference.</h4>
+        <div class="table-container">
+            <table>
+                <caption>Duration</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Duration</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>Less than 5 min</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Less than 10 min</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Less than 30 min</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Less than 60 min</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Less than 2 hours</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>> 2 hours</td>
+                </tr>
+            </table>
+            <table>
+                <caption>Made for Kids</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Made for Kids</th>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>No</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Yes</td>
+                </tr>
+            </table>
+            <table>
+                <caption>Time of the Day</caption>
+                <tr>
+                    <th>ID</th>
+                    <th>Time of the Day</th>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>morning</td>
+                </tr>
+                <tr>
+                    <td>0</td>
+                    <td>afternoon</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>evening</td>
+                </tr>
+            </table>
+
+        </div>
+        <img src="https://www.contentkarma.com/wp-content/uploads/2017/07/vector-set-different-people-on-internet.jpg" alt="Youtube Influencer" class="logo-image-2">
+</body>
+
+<br>
+<br>
+
+<footer class="banner">
+    <p>&copy; 2023 PIC16B Spring 2023 Group 5 Website. All rights reserved.</p>
+</footer>
+
+</html>
