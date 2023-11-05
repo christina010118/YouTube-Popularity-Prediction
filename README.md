@@ -14,4 +14,4 @@ To achieve this, we divide the view count into ten subcategories and employ diff
 
 The 4 main technical components of the project include web scraping YouTube API to extract data, data analysis with complex data visualization, training machine learning models, and building an interactive and dynamic webserver.
 
-This is our final output: https://youtube-prediction.herokuapp.com/
+This is our final output: https://youtube-prediction.herokuapp.com/ (Currently Disabled, to see the final output, please visit the Project write-up.pdf to see the resulted web application display)
